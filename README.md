@@ -1,2 +1,5 @@
-# Arbogast_CSCI2270_FinalProject
-Data Structures Project
+# *Arbogast_CSCI2270_FinalProject*
+---
+My final project will consist of a searchable dictionary. Every time it launches it will receive an updated version of the Oxford English Dictionary and save it locally in a formatted .txt file. If internet access is not available it will access a previously downloaded version. The menu will have a "word of the day" which will be a randomized word of length>5. The user will be able to search the dictionary for words based on exact spelling requirements, or will be given a selection of words based on their best guess. The user will also be able to access their Facebook or Twitter account and see how many words they use are actually found in the dictionary as well as their top ten most used words (after the top 50 most popular English words are vetted). The user will also be able to build their own thesaurus with words found in the dictionary or their own (after the program exits this thesaurus will be saved locally). The user will be able to access words from their thesaurus with ranks of how related two words are to each other. Eg.
+
+`` `input = "mountain"; output = "mountain", 1:hill, 2:mound"` ``
