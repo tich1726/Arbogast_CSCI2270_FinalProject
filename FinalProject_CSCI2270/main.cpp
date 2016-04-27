@@ -172,10 +172,18 @@ int main(int argc, char *argv[])
               break;
             case 3:
                 cout << "Please Enter The Word You Wish To Search And The Minimum Percent Relatability\nTo This Word You Require Eg. 'Mountain,70':" << endl;
+                cout << "Or, If You Wish To Print All The Words In Your Thesaurus Please Type In The Number 1 followed by a comma EG. '1,':" << endl;
                 getline(cin,word1,',');
-                getline(cin,percentStr);
-                percent = atoi(percentStr.c_str());
-                baseThesaurus.searchThesaurus(word1, percent);
+                if (word1.compare("1") == 0)
+                {
+                    baseThesaurus.printThesaurus();
+                }
+                else
+                {
+                    getline(cin,percentStr);
+                    percent = atoi(percentStr.c_str());
+                    baseThesaurus.searchThesaurus(word1, percent);
+                }
               break;
             case 4:
               userChoice = -1;

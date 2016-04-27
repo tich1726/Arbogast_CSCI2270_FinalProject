@@ -16,7 +16,7 @@
 1461111708 c:\users\awful\desktop\cufreshman\spring2016\csci 2270\github\finalproject_csci2270\include\dictionary.h
 	<iostream>
 
-1461787528 source:c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\main.cpp
+1461792752 source:c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\main.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -38,11 +38,11 @@
 	<string.h>
 	<time.h>
 
-1461787354 c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\include\thesaurus.h
+1461792529 c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\include\thesaurus.h
 	<vector>
 	<iostream>
 
-1461790970 source:c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\src\thesaurus.cpp
+1461792762 source:c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\src\thesaurus.cpp
 	"Thesaurus.h"
 	<vector>
 	<iostream>

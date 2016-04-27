@@ -30,6 +30,7 @@ class Thesaurus
         void addVertex(std::string word);
         void deleteEdge(std::string word1, std::string word2);
         void deleteVertex(std::string word);
+        void printThesaurus();
         vertex *findVertex(std::string word);
     protected:
     private:

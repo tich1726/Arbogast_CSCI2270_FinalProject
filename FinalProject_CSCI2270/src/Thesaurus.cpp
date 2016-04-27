@@ -240,6 +240,13 @@ void Thesaurus::deleteVertex(std::string word)
     }*/
 }
 
+void Thesaurus::printThesaurus()
+{
+    for (int i=0; i<thesaurusBase.size(); i++)
+    {
+        std::cout << thesaurusBase[i]->word << std::endl;
+    }
+}
 
 Thesaurus::~Thesaurus()
 {
