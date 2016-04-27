@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 //public
 Dictionary::Dictionary()
@@ -28,6 +29,7 @@ Dictionary::Dictionary(const char *dictionaryFile)
   if (1 == 0)
   {
     //later adding internet call to get updated dictionary
+    //EDIT: never happened
   }
   else
   {
@@ -35,7 +37,7 @@ Dictionary::Dictionary(const char *dictionaryFile)
     int count = 0;
     std::string section, word, word2, pos, pos2, def;
     std::ifstream dictionaryRaw;
-    dictionaryRaw.open(dictionaryFile);
+    dictionaryRaw.open("dictionaryRaw.txt"); //https://raw.githubusercontent.com/sujithps/Dictionary/master/Oxford%20English%20Dictionary.txt
 
     if (dictionaryRaw.good())
     {
@@ -89,6 +91,7 @@ Dictionary::Dictionary(const char *dictionaryFile)
             //break;
         }
       }
+      dictionaryRaw.close();
     }
     else
     {
@@ -99,13 +102,87 @@ Dictionary::Dictionary(const char *dictionaryFile)
   //constructor2
 }
 
-bool Dictionary::searchDict(std::string word)
+void Dictionary::searchDict(std::string word)
 {
-
+    if (word[0] > 90)
+    {
+        word[0] -= 32;
+    }
+    int index = hashFunction(word);
+    RBTree *tmp = hashTable[index];
+    while (tmp->word != "nullNode")
+    {
+        if (word < tmp->word)
+        {
+            tmp = tmp->left;
+        }
+        else if (word > tmp->word)
+        {
+            tmp = tmp->right;
+        }
+        else
+        {
+            std::cout << tmp->word << std::endl;
+            std::cout << tmp->def << std::endl;
+            break;
+        }
+    }
+    if (tmp->word == "nullNode")
+    {
+        std::cout << "Sorry, I Couldn't Find Your Word." << std::endl;
+        tmp = hashTable[index];
+        while (tmp->word != "nullNode")
+        {
+            if (tmp->word.compare(0,word.size(),word) == 0)
+            {
+                std::cout << "Did You Mean?" << std::endl;
+                printSim(tmp,word);
+                break;
+            }
+            else if (word < tmp->word)
+            {
+                tmp = tmp->left;
+            }
+            else
+            {
+                tmp = tmp->right;
+            }
+        }
+    }
 }
 
 void Dictionary::rndWord()
 {
+    time_t dayStruct;
+    int rndIndex, rndDirection, rndDay;
+    RBTree *tmp, *parent;
+    dayStruct = time(NULL);
+    tm *timePtr = localtime(&dayStruct);
+    rndDay = timePtr->tm_yday+timePtr->tm_year;
+    srand(rndDay);
+
+    rndIndex = rand()%26;
+    tmp = hashTable[rndIndex];
+    while (tmp->word != "nullNode")
+    {
+        parent = tmp;
+        rndDirection = rand()%3;
+        if (rndDirection == 0)
+        {
+            tmp = tmp->left;
+        }
+        else if (rndDirection == 1)
+        {
+            tmp = tmp->right;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    std::cout << parent->word << std::endl;
+    std::cout << parent->def << std::endl;
 
 }
 
@@ -304,6 +381,22 @@ void Dictionary::printDict(RBTree *root)
     else
     {
         std::cout << "*There Are No Entry's This Section*" << std::endl;
+    }
+}
+
+void Dictionary::printSim(RBTree *subRoot, string word)
+{
+    if (subRoot->left->word != "nullNode")
+    {
+        printSim(subRoot->left, word);
+    }
+    if (subRoot->word.compare(0,word.size(),word) == 0)
+    {
+        std::cout << subRoot->word << std::endl;
+    }
+    if (subRoot->right->word != "nullNode")
+    {
+        printSim(subRoot->right, word);
     }
 }
 

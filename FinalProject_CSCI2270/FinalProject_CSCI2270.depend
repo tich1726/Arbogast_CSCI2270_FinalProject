@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1461111755 source:c:\users\awful\desktop\cufreshman\spring2016\csci 2270\github\finalproject_csci2270\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<string>
+	"Dictionary.h"
+
+1461111736 source:c:\users\awful\desktop\cufreshman\spring2016\csci 2270\github\finalproject_csci2270\src\dictionary.cpp
+	"Dictionary.h"
+	<fstream>
+	<sstream>
+	<iostream>
+	<stdlib.h>
+
+1461111708 c:\users\awful\desktop\cufreshman\spring2016\csci 2270\github\finalproject_csci2270\include\dictionary.h
+	<iostream>
+
+1461787528 source:c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<string>
+	"Dictionary.h"
+	"Thesaurus.h"
+	<sstream>
+
+1461702714 c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\include\dictionary.h
+	<iostream>
+	<vector>
+
+1461785181 source:c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\src\dictionary.cpp
+	"Dictionary.h"
+	<fstream>
+	<sstream>
+	<iostream>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
+1461787354 c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\include\thesaurus.h
+	<vector>
+	<iostream>
+
+1461790970 source:c:\users\awful\desktop\cufreshman\spring2016\csci_2270\github\finalproject_csci2270\src\thesaurus.cpp
+	"Thesaurus.h"
+	<vector>
+	<iostream>
+	<queue>
+	<fstream>
+	<sstream>
+	<stdlib.h>
+

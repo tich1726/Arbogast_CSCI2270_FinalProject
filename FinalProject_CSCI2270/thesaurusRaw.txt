@@ -1,0 +1,4 @@
+Mountain,Hill,70
+Hill,Mountain,70
+School,Gym,30
+Gym,School,30

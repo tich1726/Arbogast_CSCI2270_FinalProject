@@ -32,9 +32,10 @@ class Dictionary
     Dictionary();
     Dictionary(const char *dictionaryFile);
     virtual ~Dictionary();
-    bool searchDict(string word);
+    void searchDict(string word);
     void printDict(string section);
     void rndWord();
+    void printSim(RBTree *subRoot, string word);
   protected:
   private:
     void leftRotate(RBTree *subRoot, int index);
