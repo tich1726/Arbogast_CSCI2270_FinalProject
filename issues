@@ -1,0 +1,12 @@
+Hey Zach,
+I'm running into a couple errors in your program and I'm unable to run your code. 
+This one in particualar I've been struggling with: 
+Severity	Code	Description	Project	File	Line	Suppression State Error	C4996	'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.	Review Project	c:\users\child\dropbox\c++\review project\review project\dictionary.cpp	162	
+
+I've pragma'd it out to see if it runs but it will crash upon running. I'm also using Visual Studio which may be causing the program to crash. Which compiler were you using to run the code? Maybe I should try running on what you used. 
+I wish I was more experienced programming to know what was going wrong, this is my first year of programming.. :(
+But I took a look at all your code and it looks perfectly logical and that it would run fine.
+
+
+Cheers,
+Tim
